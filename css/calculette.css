@@ -1,0 +1,100 @@
+html {
+  height: 100%;
+  font-size: 20px;
+  background-color: #ffe;
+}
+
+body {
+  height: 100%;
+  width: 60em;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 5em;
+}
+
+nav {
+  background-color: #222;
+  color: #fff;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+nav li.courant a {
+  background-color: #665;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: .5em 0;
+}
+
+nav a:hover {
+  background-color: #333;
+}
+
+h1 {
+  font-size: 4em;
+  text-align: center;
+  margin: .5em 0 0;
+}
+
+div.affichage {
+  background-color: #666666;
+  border: 1px solid black;
+  border-radius: 0.1em 0.1em 0.1em 0.1em;
+  -webkit-box-shadow: 0.2em 0.2em 0.2em -0.2em black inset;
+          box-shadow: 0.2em 0.2em 0.2em -0.2em black inset;
+  color: #EEEEEE;
+  font-family: courier new;
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1em;
+  padding: 0.3em 0.25em 0.15em;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+form {
+  background-color: #CCC;
+  text-align: center;
+  padding: 1em;
+  margin: 1em auto;
+  width: 32em;
+  font-size: 1.5em;
+}
+
+form input, form button, form select {
+  font: inherit;
+}
+
+body > p, div.lien {
+  text-align: center;
+}
+/*# sourceMappingURL=calculette.css.map */
