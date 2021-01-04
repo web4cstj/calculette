@@ -1,12 +1,4 @@
 <?php
-/*
-Consignes
-=========
-Dans un premier temps, reproduire le fonctionnement de la page en suivant l'exemple.
-Ensuite, remplacer les liens par un formulaire contenant des champs de texte et un menu déroulant
-	Le formulaire DOIT réafficher les données qui lui sont envoyées
-Finalement, modifier le code pour utiliser la méthode POST à la place
-*/
 $operateurs = [
 	"addition" => "+", 
 	"soustraction" => "-",

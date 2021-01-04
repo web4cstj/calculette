@@ -1,12 +1,4 @@
 <?php
-/*
-Consignes
-=========
-Dans un premier temps, reproduire le fonctionnement de la page en suivant l'exemple.
-Ensuite, remplacer les liens par un formulaire contenant des champs de texte et un menu déroulant
-	Le formulaire DOIT réafficher les données qui lui sont envoyées
-Finalement, modifier le code pour utiliser la méthode POST à la place
-*/
 $operateurs = [
 	"addition" => "+", 
 	"soustraction" => "-",
@@ -51,27 +43,23 @@ switch($op) {
 // Résultat attendu : "2 + 2 = 4"
 $affichage = $n1." ".$operateurs[$op]." ".$n2." = ".$resultat;
 
-$champ_n1 = '<input type="number" name="n1" id="n1" value="'.$n1.'" />';
-$champ_op = '<select name="op" id="op">';
-foreach ($operateurs as $nom=>$signe) {
-	if ($op === $nom) {
-		$champ_op .= '<option value="'.$nom.'" selected="selected">'.$signe.'</option>';	
-	} else {
-		$champ_op .= '<option value="'.$nom.'">'.$signe.'</option>';	
-	}
-}
-$champ_op .= '</select>';
-$champ_n2 = '<input type="number" name="n2" id="n2" value="'.$n2.'" />';
 $form = '';
 $form .= '<form action="" method="post">';
-$form .= $champ_n1;
-$form .= $champ_op;
-$form .= $champ_n2;
+$form .= '<input type="number" name="n1" id="n1" value="'.$n1.'" />';
+$form .= '<select name="op" id="op">';
+foreach ($operateurs as $nom=>$signe) {
+	if ($op === $nom) {
+		$form .= '<option value="'.$nom.'" selected="selected">'.$signe.'</option>';	
+	} else {
+		$form .= '<option value="'.$nom.'">'.$signe.'</option>';	
+	}
+}
+$form .= '</select>';
+$form .= '<input type="number" name="n2" id="n2" value="'.$n2.'" />';
 $form .= '<input type="submit"/>';
 $form .= '</form>';
 
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
